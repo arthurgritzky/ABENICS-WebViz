@@ -2,7 +2,6 @@ import * as THREE from 'https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/thr
 import { STLLoader } from 'https://cdn.jsdelivr.net/npm/three/examples/jsm/loaders/STLLoader.js';
 import { OrbitControls } from 'https://cdn.jsdelivr.net/npm/three/examples/jsm/controls/OrbitControls.js';
 
-// Your Three.js code here
 
 // Scene setup
 const scene = new THREE.Scene();
