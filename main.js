@@ -25,7 +25,7 @@ let CSgear, MPgearA, MPgearB, holder1, holder2;
 // Load first STL file
 const loader = new STLLoader();
 loader.load(
-    '/STLs/sphericalgear.stl', // Path to the STL file in the /public folder
+    './STLs/sphericalgear.stl', // Path to the STL file in the /public folder
     function (geometry) {
         console.log('STL file loaded successfully');
         const material = new THREE.MeshStandardMaterial({
@@ -49,7 +49,7 @@ loader.load(
 
 // Load second STL file
 loader.load(
-    '/STLs/monopolegear.stl', // Path to the second STL file
+    './STLs/monopolegear.stl', // Path to the second STL file
     function (geometry) {
         console.log('Second STL file loaded successfully');
         const material = new THREE.MeshStandardMaterial({
@@ -74,7 +74,7 @@ loader.load(
 
 // Load third STL file
 loader.load(
-    '/STLs/monopolegear.stl', // Path to the third STL file
+    './STLs/monopolegear.stl', // Path to the third STL file
     function (geometry) {
         console.log('Third STL file loaded successfully');
         const material = new THREE.MeshStandardMaterial({
@@ -99,7 +99,7 @@ loader.load(
 
 // Load first monopole holder STL file
 loader.load(
-    '/STLs/monopolegear_holder.stl', // Path to the first monopole holder STL file
+    './STLs/monopolegear_holder.stl', // Path to the first monopole holder STL file
     function (geometry) {
         console.log('First monopole holder STL file loaded successfully');
         const material = new THREE.MeshStandardMaterial({
@@ -124,7 +124,7 @@ loader.load(
 
 // Load second monopole holder STL file
 loader.load(
-    '/STLs/monopolegear_holder.stl', // Path to the second monopole holder STL file
+    './STLs/monopolegear_holder.stl', // Path to the second monopole holder STL file
     function (geometry) {
         console.log('Second monopole holder STL file loaded successfully');
         const material = new THREE.MeshStandardMaterial({
