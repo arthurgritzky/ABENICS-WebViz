@@ -7,9 +7,8 @@
     <style>
         body { margin: 0; overflow: hidden; } /* Remove scrollbars and margin */
     </style>
-</head>
-<body>
-    <!-- Import Map to load Three.js modules -->
+
+    <!-- Import Map (must be in <head>) -->
     <script type="importmap">
     {
       "imports": {
@@ -19,7 +18,8 @@
       }
     }
     </script>
-
+</head>
+<body>
     <!-- Load the JavaScript file -->
     <script type="module" src="./main.js"></script>
 </body>
