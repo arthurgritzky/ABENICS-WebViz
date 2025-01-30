@@ -2,8 +2,6 @@ import * as THREE from 'three';
 import { STLLoader } from 'three/examples/jsm/loaders/STLLoader';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 
-
-
 // Scene setup
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
@@ -51,7 +49,7 @@ loader.load(
 
 // Load second STL file
 loader.load(
-    './STLs/monopolegear.STL', // Path to the second STL file
+    './STLs/monopolegear.STL', 
     function (geometry) {
         console.log('Second STL file loaded successfully');
         const material = new THREE.MeshStandardMaterial({
@@ -76,7 +74,7 @@ loader.load(
 
 // Load third STL file
 loader.load(
-    './STLs/monopolegear.STL', // Path to the third STL file
+    './STLs/monopolegear.STL',
     function (geometry) {
         console.log('Third STL file loaded successfully');
         const material = new THREE.MeshStandardMaterial({
@@ -101,7 +99,7 @@ loader.load(
 
 // Load first monopole holder STL file
 loader.load(
-    './STLs/monopolegear_holder.STL', // Path to the first monopole holder STL file
+    './STLs/monopolegear_holder.STL', 
     function (geometry) {
         console.log('First monopole holder STL file loaded successfully');
         const material = new THREE.MeshStandardMaterial({
@@ -112,8 +110,8 @@ loader.load(
 
         holder1 = new THREE.Mesh(geometry, material);
         holder1.geometry.center();
-        holder1.scale.set(0.1, 0.1, 0.1); // Adjust scale as needed
-        holder1.position.x = 7.9; // Move 96 mm along the x-axis
+        holder1.scale.set(0.1, 0.1, 0.1); 
+        holder1.position.x = 7.9; 
         scene.add(holder1);
     },
     function (xhr) {
@@ -137,8 +135,8 @@ loader.load(
 
         holder2 = new THREE.Mesh(geometry, material);
         holder2.geometry.center();
-        holder2.scale.set(0.1, 0.1, 0.1); // Adjust scale as needed
-        holder2.position.x = -7.9;// Move -48 mm along the x-axis
+        holder2.scale.set(0.1, 0.1, 0.1); 
+        holder2.position.x = -7.9;
         scene.add(holder2);
     },
     function (xhr) {
@@ -154,9 +152,9 @@ camera.position.z = 10;
 
 // OrbitControls
 const controls = new OrbitControls(camera, renderer.domElement);
-controls.enableDamping = true; // Enable damping (inertia)
-controls.dampingFactor = 0.25; // Damping factor
-controls.screenSpacePanning = false; // Do not allow panning
+controls.enableDamping = true; 
+controls.dampingFactor = 0.25; 
+controls.screenSpacePanning = false;
 
 // Create sliders
 const sliderX = document.createElement('input');
@@ -194,25 +192,18 @@ sliderX.addEventListener('input', () => {
     if (CSgear) {
         CSgear.rotation.x = THREE.MathUtils.degToRad(sliderX.value);
     }
-
-    
-
 });
 
 sliderY.addEventListener('input', () => {
     if (CSgear) {
         CSgear.rotation.y = THREE.MathUtils.degToRad(sliderY.value);
     }
-
 });
 
 sliderZ.addEventListener('input', () => {
     if (CSgear) {
         CSgear.rotation.z = THREE.MathUtils.degToRad(sliderZ.value);
     }
-
-
-
 });
 
 // Helper function to create rotation matrix
